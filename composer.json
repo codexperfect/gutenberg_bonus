@@ -17,6 +17,6 @@
     }
   ],
   "require": {
-    "codexperfect/ultimate-addons-for-gutenberg": "^1.13.0"
+    "codexperfect/ultimate-addons-for-gutenberg": "dev-master"
   }
 }
