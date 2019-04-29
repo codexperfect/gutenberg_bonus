@@ -1,0 +1,235 @@
+/**
+ * Returns Dynamic Generated CSS
+ */
+
+import generateCSS from "../../../dist/blocks/uagb-controls/generateCSS"
+import generateCSSUnit from "../../../dist/blocks/uagb-controls/generateCSSUnit"
+
+function CtaStyle( props ) {
+	const {
+		textAlign,
+		titleColor,
+		descColor,
+		titleFontSize,
+		titleFontSizeType,
+		titleFontSizeMobile,
+		titleFontSizeTablet,
+		titleFontFamily,
+		titleFontWeight,
+		titleFontSubset,
+		titleLineHeightType,
+		titleLineHeight,
+		titleLineHeightTablet,
+		titleLineHeightMobile,
+		titleLoadGoogleFonts,
+		descFontSize,
+		descFontSizeType,
+		descFontSizeMobile,
+		descFontSizeTablet,
+		descFontFamily,
+		descFontWeight,
+		descFontSubset,
+		descLineHeightType,
+		descLineHeight,
+		descLineHeightTablet,
+		descLineHeightMobile,
+		descLoadGoogleFonts,
+		titleSpace,
+		descSpace,
+		ctaPosition,
+		block_id,
+		ctaFontSize,
+		ctaFontSizeType,
+		ctaFontSizeMobile,
+		ctaFontSizeTablet,
+		ctaFontFamily,
+		ctaFontWeight,
+		ctaFontSubset,
+		ctaLoadGoogleFonts,
+		ctaBtnSize,
+		ctaBtnLinkColor,
+		ctaBgColor,
+		ctaBtnVertPadding,
+		ctaBtnHrPadding,
+		ctaBorderStyle,
+		ctaBorderColor,
+		ctaBorderWidth,
+		ctaBorderRadius,
+		ctaLinkHoverColor,
+		ctaBgHoverColor,
+		ctaBorderhoverColor,
+		ctaIconSpace,
+		ctaLeftSpace,
+		ctaRightSpace,
+		contentWidth,
+		ctaType
+	} = props.attributes
+
+	var clientId = "uagb-cta-block-"+props.clientId
+
+	var selectors = {
+
+		" .uagb-cta__content-wrap" : {
+			"text-align" : textAlign,
+		},
+		// CTA style
+
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-text" : {
+			"font-size" : generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+			"font-family": ctaFontFamily,
+			"font-weight": ctaFontWeight,
+			"color": ctaBtnLinkColor,
+		},
+		" .uagb-cta__button-wrapper:hover a.uagb-cta-typeof-text" : {
+			"color": ctaLinkHoverColor,
+		},
+
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-button" : {
+			"font-size" : generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+			"font-family": ctaFontFamily,
+			"font-weight": ctaFontWeight,
+			"color": ctaBtnLinkColor,
+			"background-color": ctaBgColor,
+			"border-style": ctaBorderStyle,
+			"border-color": ctaBorderColor,
+			"border-radius": generateCSSUnit( ctaBorderRadius, "px" ),
+			"border-width": generateCSSUnit( ctaBorderWidth, "px" ),
+			"padding-top": generateCSSUnit( ctaBtnVertPadding, "px" ),
+			"padding-bottom": generateCSSUnit( ctaBtnVertPadding, "px" ),
+			"padding-left": generateCSSUnit( ctaBtnHrPadding, "px" ),
+			"padding-right": generateCSSUnit( ctaBtnHrPadding, "px" ),
+		},
+
+		" .uagb-cta__button-wrapper:hover a.uagb-cta-typeof-button" : {
+			"color": ctaLinkHoverColor,
+			"background-color": ctaBgHoverColor,
+			"border-color": ctaBorderhoverColor,
+		},
+
+		" .uagb-cta__button-wrapper .uagb-cta-with-svg" : {
+			"font-size" : generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+			"height": generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+			"width": generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+			"line-height": generateCSSUnit( ctaFontSize, ctaFontSizeType ),
+		},
+
+		" .uagb-cta__button-wrapper .uagb-cta__block-link svg" : {
+			"fill" : ctaBtnLinkColor,
+		},
+
+		" .uagb-cta__button-wrapper:hover .uagb-cta__block-link svg" : {
+			"fill": ctaLinkHoverColor,
+		},
+
+		// Title Style
+		" .editor-rich-text .uagb-cta__title" : {
+			"font-size" : generateCSSUnit( titleFontSize, titleFontSizeType ),
+			"font-family": titleFontFamily,
+			"font-weight": titleFontWeight,
+			"line-height": generateCSSUnit( titleLineHeight, titleLineHeightType ),
+			"color": titleColor,
+			"margin-bottom": generateCSSUnit( titleSpace, "px" ),
+		},
+
+		// Description Style
+		" .editor-rich-text .uagb-cta__desc" : {
+			"font-size" : generateCSSUnit( descFontSize, descFontSizeType ),
+			"font-family": descFontFamily,
+			"font-weight": descFontWeight,
+			"line-height": generateCSSUnit( descLineHeight, descLineHeightType ),
+			"color": descColor,
+			"margin-bottom": generateCSSUnit( descSpace, "px" ),
+		},
+
+		" .uagb-cta__align-button-after" : {
+			"margin-left" : generateCSSUnit( ctaIconSpace, "px" ),
+		},
+
+		" .uagb-cta__align-button-before" : {
+			"margin-right" : generateCSSUnit( ctaIconSpace, "px" ),
+		},
+	}
+
+	if( textAlign === "left" && ctaPosition === "right" ){
+		selectors[" .uagb-cta__left-right-wrap .uagb-cta__content"] = {
+			"margin-left" : generateCSSUnit( ctaLeftSpace, "px" ),
+			"margin-right" : "0",
+		}
+	}
+
+	if( textAlign === "right" && ctaPosition === "right" ){
+		selectors[" .uagb-cta__left-right-wrap .uagb-cta__content"] = {
+			"margin-right" : generateCSSUnit( ctaRightSpace, "px" ),
+			"margin-left" : "0",
+		}
+	}
+
+	if( ctaPosition === "right" && ( ctaType === "text" || ctaType === "button" ) ){
+		selectors[" .uagb-cta__content-right .uagb-cta__left-right-wrap .uagb-cta__content"] = {
+			"width" : generateCSSUnit( contentWidth, "%" ),
+		}
+		selectors[" .uagb-cta__content-right .uagb-cta__left-right-wrap .uagb-cta__link-wrapper"] = {
+			"width" : generateCSSUnit( ( 100 - contentWidth ), "%" ),
+		}
+	}
+
+	var tablet_selectors = {
+		" .editor-rich-text .uagb-cta__title" : {
+			"font-size" : generateCSSUnit( titleFontSizeTablet, titleFontSizeType ),
+			"line-height": generateCSSUnit( titleLineHeightTablet, titleLineHeightType ),
+		},
+		" .editor-rich-text .uagb-cta__desc" : {
+			"font-size" : generateCSSUnit( descFontSizeTablet, descFontSizeType ),
+			"line-height": generateCSSUnit( descLineHeightTablet, descLineHeightType ),
+		},
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-text" : {
+			"font-size" : generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+		},
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-button" : {
+			"font-size" : generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+		},
+		" .uagb-cta__button-wrapper .uagb-cta-with-svg" : {
+			"font-size" : generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+			"height": generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+			"width": generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+			"line-height": generateCSSUnit( ctaFontSizeTablet, ctaFontSizeType ),
+		},
+	}
+
+	var mobile_selectors = {
+		" .editor-rich-text .uagb-cta__title" : {
+			"font-size" : generateCSSUnit( titleFontSizeMobile, titleFontSizeType ),
+			"line-height": generateCSSUnit( titleLineHeightMobile, titleLineHeightType ),
+		},
+		" .editor-rich-text .uagb-cta__desc" : {
+			"font-size" : generateCSSUnit( descFontSizeMobile, descFontSizeType ),
+			"line-height": generateCSSUnit( descLineHeightMobile, descLineHeightType ),
+		},
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-text" : {
+			"font-size" : generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+		},
+		" .uagb-cta__button-wrapper a.uagb-cta-typeof-button" : {
+			"font-size" : generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+		},
+		" .uagb-cta__button-wrapper .uagb-cta-with-svg" : {
+			"font-size" : generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+			"height": generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+			"width": generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+			"line-height": generateCSSUnit( ctaFontSizeMobile, ctaFontSizeType ),
+		},
+	}
+
+
+	var id = `.block-editor-page #wpwrap #${ clientId }`
+
+	var styling_css = generateCSS( selectors, id )
+
+	styling_css += generateCSS( tablet_selectors, id, true, "tablet" )
+
+	styling_css += generateCSS( mobile_selectors, id, true, "mobile" )
+
+	return styling_css
+
+}
+
+export default CtaStyle
