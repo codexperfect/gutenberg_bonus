@@ -17,6 +17,6 @@
     }
   ],
   "require": {
-    "codexperfect/ultimate-addons-for-gutenberg": "dev-master"
+    "brainstormforce/ultimate-addons-for-gutenberg": "dev-master"
   }
 }
