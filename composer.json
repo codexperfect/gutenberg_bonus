@@ -9,13 +9,6 @@
     }
   ],
   "license": "GPL-2.0+",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/codexperfect/ultimate-addons-for-gutenberg.git"
-    }
-  ],
   "require": {
-    "brainstormforce/ultimate-addons-for-gutenberg": "dev-master"
   }
 }
