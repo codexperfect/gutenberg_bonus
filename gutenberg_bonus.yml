@@ -1,0 +1,6 @@
+# Libraries to be injected on editor (node edit)
+libraries-edit:
+  - gutenberg_bonus/block-edit
+# Libraries to be injected on node view
+libraries-view:
+  - gutenberg_bonus/block-view

@@ -1,0 +1,7 @@
+name: Gutenberg Bonus
+type: module
+description: Additional blocks for Gutenberg.
+package: Gutenberg
+core: 8.x
+dependencies:
+  - gutenberg

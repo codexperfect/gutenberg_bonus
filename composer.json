@@ -1,0 +1,16 @@
+{
+  "name": "drupal/gutenberg_bonus",
+  "description": "Additional blocks for Gutenberg.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "sashainparis",
+      "email": "alexandre@codexperfect.com"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "codexperfect/ultimate-addons-for-gutenberg": "^1.0"
+  }
+}
