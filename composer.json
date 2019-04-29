@@ -10,7 +10,13 @@
   ],
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/codexperfect/ultimate-addons-for-gutenberg.git"
+    }
+  ],
   "require": {
-    "codexperfect/ultimate-addons-for-gutenberg": "^1.0"
+    "codexperfect/ultimate-addons-for-gutenberg": "^1.13.0"
   }
 }
