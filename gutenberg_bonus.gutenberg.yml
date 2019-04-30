@@ -1,0 +1,26 @@
+# Libraries to be injected on editor (node edit)
+libraries-edit:
+  - gutenberg_bonus/uagb-advanced-heading-edit
+  - gutenberg_bonus/uagb-blockquote-edit
+  - gutenberg_bonus/uagb-buttons-edit
+  - gutenberg_bonus/uagb-call-to-action-edit
+  - gutenberg_bonus/uagb-cf7-styler-edit
+  - gutenberg_bonus/uagb-column-edit
+  - gutenberg_bonus/uagb-columns-edit
+  - gutenberg_bonus/uagb-gf-styler-edit
+  - gutenberg_bonus/uagb-google-map-edit
+  - gutenberg_bonus/uagb-icon-list-edit
+  - gutenberg_bonus/uagb-info-box-edit
+  - gutenberg_bonus/uagb-marketing-button-edit
+  - gutenberg_bonus/uagb-post-edit
+  - gutenberg_bonus/uagb-price-list-edit
+  - gutenberg_bonus/uagb-section-edit
+  - gutenberg_bonus/uagb-social-share-edit
+  - gutenberg_bonus/uagb-table-of-contents-edit
+  - gutenberg_bonus/uagb-team-edit
+  - gutenberg_bonus/uagb-testimonial-edit
+  - gutenberg_bonus/uagb-timeline-edit
+
+# Libraries to be injected on node view
+#libraries-view:
+#  - gutenberg_bonus/block-view

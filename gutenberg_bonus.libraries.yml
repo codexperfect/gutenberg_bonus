@@ -1,14 +1,120 @@
-block-edit:
+uagb-advanced-heading-edit:
   js:
-    js/index.js: { }
-  css:
-    theme:
-      css/style.css: { }
-      css/edit.css: { }
+    ultimate-addons-for-gutenberg/src/blocks/advanced-heading/block.js: { }
   dependencies:
     - gutenberg/editor
     - drupal
-block-view:
-  css:
-    theme:
-      css/style.css: { }
+uagb-blockquote-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/blockquote/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-buttons-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/buttons/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-call-to-action-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/call-to-action/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-cf7-styler-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/cf7-styler/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-column-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/column/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-columns-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/columns/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-gf-styler-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/gf-styler/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-google-map-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/google-map/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-icon-list-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/icon-list/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-info-box-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/info-box/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-marketing-button-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/marketing-button/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-post-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/post/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-price-list-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/price-list/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-section-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/section/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-social-share-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/social-share/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-table-of-contents-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/table-of-contents/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-team-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/team/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-testimonial-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/testimonial/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
+uagb-timeline-edit:
+  js:
+    ultimate-addons-for-gutenberg/src/blocks/timeline/block.js: { }
+  dependencies:
+    - gutenberg/editor
+    - drupal
